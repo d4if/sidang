@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Admin - Dashboard HTML</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    
+
+    <!-- bootstrap.min css -->
+ <link rel="stylesheet" href="./plugins/bulma/bulma.min.css">
+ <!-- Icon Font Css -->
+ <link rel="stylesheet" href="./plugins/themify/css/themify-icons.css">
+ <link rel="stylesheet" href="./plugins/icofont/icofont.css">
+ <link rel="stylesheet" href="./plugins/magnific-popup/dist/magnific-popup.css">
+ <!-- Owl Carousel CSS -->
+ <link rel="stylesheet" href="./plugins/slick-carousel/slick/slick.css">
+ <link rel="stylesheet" href="./plugins/slick-carousel/slick/slick-theme.css">
+ <link rel="stylesheet" href="./plugins/modal-video/modal-video.min.css">
+
+ <link rel="stylesheet" href="./inicss/font-awesome.min.css">
+
+ <!-- Main Stylesheet -->
+ <link rel="stylesheet" href="./inicss/style.css">
+</head>
+
+<body>
+    <!-- <div id="mainadminAuthorization"></div> -->
+
+    <div id="reportsPage" class="" id="home">
+        <nav style="background-color: rgb(100, 97, 97);" class="navbar navbar-expand-xl">
+
+            <!-- NAVBAR START -->
+            <div class="container h-100">
+                <a class="navbar-brand" href="./home.html">
+                    <h1 class="tm-site-title mb-0">CMS Admin</h1>
+                </a>
+                <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars tm-nav-icon"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto h-100">
+
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-file-alt"></i>
+                                <span>
+                                   FRONT END <i class="fas fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./createFrontend.html">Input Nilai Frontend</a>
+                                <a class="dropdown-item" href="./getFrontend.html">Lihat Tabel Nilai Frontend</a>
+                            </div>
+                        </li>
+                        
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-file-alt"></i>
+                                <span>
+                                    BACKEND <i class="fas fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./createBackend.html">Input Nilai Backend</a>
+                                <a class="dropdown-item" href="./getBackend.html">Lihat Tabel Nilai Backend</a>
+                            </div>
+                        </li>
+
+                        
+                        <li class="nav-item">
+                            <a onclick="Logout()" style="background-color: red;" class="nav-link" href="./index.html">
+                                LOGOUT
+                            </a>
+                        </li>
+        
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+            <!-- NAVBAR END -->
+        <div class="hero is-fullheight" style="background: #F8A556;">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-centered">
+        
+                        <div class="column is-4">
+        
+                            <!-- START FORM -->
+                            <div id="signupForm" class="box">
+        
+                                <div id="field-username" class="field">
+                                    <label class="label">Npm</label>
+                                    <div class="control has-icons-left">
+                                        <input id="npm" name="npm" type="number" class="input" placeholder="npm" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+        
+                                <div id="field-username" class="field">
+                                    <label class="label">Nama</label>
+                                    <div class="control has-icons-left">
+                                        <input id="nama" name="nama" type="text" class="input" placeholder="nama" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+        
+                                <div id="field-username" class="field">
+                                    <label class="label">Autentikasi Token</label>
+                                    <div class="control has-icons-left">
+                                        <input id="autentikasitoken" name="autentikasitoken" type="text" class="input" placeholder="autentikasitoken" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+        
+                                <div id="field-username" class="field">
+                                    <label class="label">Package Sendiri</label>
+                                    <div class="control has-icons-left">
+                                        <input id="packagesendiri" name="packagesendiri" type="text" class="input" placeholder="packagesendiri" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+        
+                                <div id="field-username" class="field">
+                                    <label class="label">Endpoint GCF Jakarta</label>
+                                    <div class="control has-icons-left">
+                                        <input id="endpointgcfjakarta" name="endpointgcfjakarta" type="text" class="input" placeholder="endpointgcfjakarta" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+        
+                                <div id="field-username" class="field">
+                                    <label class="label">Integrasi WA my.id</label>
+                                    <div class="control has-icons-left">
+                                        <input id="integrasiwamyid" name="integrasiwamyid" type="text" class="input" placeholder="endpointgcfjakarta" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+        
+                                <div id="btnSignup" class="field">
+                                    <button onclick="createBackendFix()" class="button" type="submit"  style="background: #F8A556;">Masukan Nilai Backend</button>
+                                </div>
+        
+                            </div>
+                            <!-- END FORM -->
+        
+                        </div>
+                    </div>
+        
+                    <!-- <a href="index.html" class="button is-info" style="position: absolute; top: 10px; left: 10px;">Back</a> -->
+                </div>
+            </div>
+        </div>
+        <footer class="tm-footer row tm-mt-small">
+            <div class="col-12 font-weight-light">
+                <p class="text-center text-white mb-0 px-4 small">
+                    Copyright &copy; <b>2023</b> All rights reserved. 
+                    
+                    Design: <a rel="nofollow noopener" class="tm-footer-link">Fancypedia</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    </body>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="js/moment.min.js"></script>
+    <!-- https://momentjs.com/ -->
+    <script src="js/Chart.min.js"></script>
+    <!-- http://www.chartjs.org/docs/latest/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script src="js/tooplate-scripts.js"></script>
+    
+
+
+    <!-- <script type="module" src="index.js"></script> -->
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.2.2/inijs/index.js"></script> -->
+
+
+<!-- JS DIBUAT SENDIRI -->
+    <script type="module" src="./inijs/main.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.4/cms/inijs/main.js"></script> -->
+</html>
