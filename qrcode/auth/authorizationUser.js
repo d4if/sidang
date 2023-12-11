@@ -22,7 +22,7 @@ export default function adminAuthorization() {
     .then(data => {
         console.log(data);
         // Process the received data
-        // handleAuthorizationResult(data);
+        handleAuthorizationResult(data);
 
         return data; // Return the data for use in main.js if needed
     })
@@ -39,8 +39,8 @@ function handleAuthorizationResult(data) {
         
     } else if (data.status === false) {
         // No token header or no decode result
-        deleteCookie();
-        window.location.href="/qrcode/index.html";
+        // deleteCookie();
+        window.location.href="https://repo.if.ulbi.ac.id/sidang/qrcode/";
 
     }
 }
