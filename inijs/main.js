@@ -20,6 +20,16 @@ window.createBackendFix = createBackendFix;
 
 window.editFrontend = editFrontend;
 window.editBackend = editBackend;
+
+
+import adminAuthorization from "../qrcode/auth/authorizationUser.js";
+
+const previewadminAuthorization = document.getElementById('mainadminAuthorization');
+if (previewadminAuthorization) {
+    adminAuthorization();
+} else {
+    console.log("Element with ID 'mainadminAuthorization' not found. adminAuthorization not executed.");
+}
 // window.createBackend = createBackend;
 // window.editFrontend = editFrontend;
 // window.editBackend = editBackend;

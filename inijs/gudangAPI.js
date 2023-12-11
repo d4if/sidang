@@ -22,6 +22,8 @@
 
 // ------------------------ FORM SIDANG ----------------------------------
 
+export let APIAuthorizationAdmin = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/loginauth";
+
 export let adminloginbaru = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/loginp3";
 
 
