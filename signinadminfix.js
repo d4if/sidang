@@ -59,8 +59,19 @@ function responseData(data) {
         window.location.href = "./home.html";
     } else {
         // Handle the case where login is not successful
-        alert('akun tidak ada')
-        window.location.href = "./index.html";
+        // alert('akun tidak ada')
+        Swal.fire({
+            title: "Username Password Salah!",
+            text: "Coba Lagi",
+            icon: "warning",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "Coba Lagi"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "./index.html";
+            }
+          });
+        // window.location.href = "./index.html";
         console.error("Login failed. Status:", data.status, "Message:", data.token);
     }
 }

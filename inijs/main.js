@@ -1,7 +1,6 @@
 
 
 
-// import Logout from "./logout.js";
 
 import editFrontend from "../scriptupdatedFrontend2.js";
 import editBackend from "../scriptupdatedBackend2.js";
@@ -12,7 +11,8 @@ import createBackendFix from "./content/createBackend.js";
 
 window.LoginAdminFix = LoginAdminFix;
 
-// window.Logout = Logout;
+import Logout from "./logout.js";
+window.Logout = Logout;
 // window.checkCookie = checkCookie;
 
 window.createFrontendFix = createFrontendFix;
