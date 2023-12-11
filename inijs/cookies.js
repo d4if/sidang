@@ -36,18 +36,8 @@ export function deleteCookie() {
     }
 }
 
-export function getCookie(cname) {
-	let name = cname + "=";
-	let decodedCookie = decodeURIComponent(document.cookie);
-	let ca = decodedCookie.split(';');
-	for(let i = 0; i < ca.length; i++) {
-		let c = ca[i];
-		while (c.charAt(0) == ' ') {
-		c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) {
-		return c.substring(name.length, c.length);
-		}
-	}
-	return "";
-	}
+export function getCookie(name) {
+  function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }
+  let match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
+  return match ? match[1] : null;
+}

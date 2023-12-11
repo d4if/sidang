@@ -9,7 +9,6 @@ let ctxLine,
     configBar,
     configPie,
     lineChart;
-barChart, pieChart;
 // DOM is ready
 $(function () {
     drawLineChart(); // Line Chart

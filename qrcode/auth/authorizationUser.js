@@ -1,19 +1,18 @@
-import { getCookie,deleteCookie } from "../cookies.js";
+import { getCookie,deleteCookie } from "../../inijs/cookies.js";
 import { APIAuthorizationAdmin } from "../../inijs/gudangAPI.js";
 
 export default function adminAuthorization() {
-    const myHeaders = new Headers();
     let tokencookie = getCookie("login");
-    myHeaders.append("login", tokencookie);
-
-    var requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
 
     // Fetch GET request
-    return fetch(APIAuthorizationAdmin, requestOptions)
+    fetch(APIAuthorizationAdmin, {
+        method: 'GET',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            token: tokencookie
+        }
+    })
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -21,8 +20,9 @@ export default function adminAuthorization() {
         return response.json();
     })
     .then(data => {
+        console.log(data);
         // Process the received data
-        handleAuthorizationResult(data);
+        // handleAuthorizationResult(data);
 
         return data; // Return the data for use in main.js if needed
     })
@@ -40,7 +40,7 @@ function handleAuthorizationResult(data) {
     } else if (data.status === false) {
         // No token header or no decode result
         deleteCookie();
-        window.location.href="https://repo.if.ulbi.ac.id/sidang/qrcode/";
+        window.location.href="/qrcode/index.html";
 
     }
 }
