@@ -8,7 +8,7 @@ function deleteBackend() {
       return;
     }
   
-    const endpoint = 'https://asia-southeast2-testlogin-366704.cloudfunctions.net/deletebe';
+    const endpoint = 'https://asia-southeast2-testlogin-366704.cloudfunctions.net/deletebee';
     const payload = {
       npm: backendID
     };

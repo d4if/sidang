@@ -26,7 +26,7 @@ export let adminloginbaru = "https://asia-southeast2-testlogin-366704.cloudfunct
 
 
 export let createFrontend = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/createfe";
-export let createBackend = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/createbe";
+export let createBackend = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/createbee";
 
 export let upadateFrontend = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/updatefe";
-export let updateBackend = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/updatebe";
+export let updateBackend = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/updatebee";

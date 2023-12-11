@@ -61,15 +61,21 @@ function responseData(data) {
         // Handle the case where login is not successful
         // alert('akun tidak ada')
         Swal.fire({
-            title: "Username Password Salah!",
+            title: "Data Yang Anda Masukan Salah",
             text: "Coba Lagi",
             icon: "warning",
+            // showCancelButton: true,
             confirmButtonColor: "#3085d6",
-            confirmButtonText: "Coba Lagi"
+            // cancelButtonColor: "#3085d6",
+            confirmButtonText: "Coba Lagi",
+            // cancelButtonText: "Ke Google"
           }).then((result) => {
             if (result.isConfirmed) {
                 window.location.href = "./index.html";
             }
+            // else{
+            //     window.location.href = "https://www.google.com/";
+            // }
           });
         // window.location.href = "./index.html";
         console.error("Login failed. Status:", data.status, "Message:", data.token);
