@@ -1,10 +1,10 @@
-import { getCookie } from "./inijs/cookies.js";
+import { getCookies } from "./inijs/cookies.js";
 import { patchHeader } from "./inijs/api.js";
 import { upadateFrontend } from "./inijs/gudangAPI.js";
 
 export default function editFrontend(){
     let tokenkey = "token";
-    let tokenvalue = getCookie("token");
+    let tokenvalue = getCookies("token");
 
     let npm = parseInt(document.getElementById('npm').value);
     let nama = document.getElementById('nama').value;
