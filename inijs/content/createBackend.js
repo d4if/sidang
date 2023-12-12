@@ -7,7 +7,7 @@ import { getCookie } from "../cookies.js";
 export default function createBackendFix(){
     // tokenstring = getCookie("token")
     let tokenkey = "token";
-    let tokenvalue = getCookie("token");
+    let tokenvalue = getCookie("login");
 
 
     let datainjson = {
