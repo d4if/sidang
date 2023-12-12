@@ -1,13 +1,13 @@
 import { postBiasa } from "../api.js";
 import { getValue } from "../element.js";
 import { createBackend } from "../gudangAPI.js";
-import { getCookie } from "../cookies.js";
+import { getCookies } from "../cookies.js";
 
 
 export default function createBackendFix(){
     // tokenstring = getCookie("token")
     let tokenkey = "token";
-    let tokenvalue = getCookie("login");
+    let tokenvalue = getCookies("login");
 
 
     let datainjson = {
