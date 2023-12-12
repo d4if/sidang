@@ -1,10 +1,10 @@
-import { getCookie } from "./inijs/cookies.js";
+import { getCookies } from "./inijs/cookies.js";
 import { patchHeader } from "./inijs/api.js";
 import { updateBackend } from "./inijs/gudangAPI.js";
 
 export default function editBackend(){
     let tokenkey = "token";
-    let tokenvalue = getCookie("token");
+    let tokenvalue = getCookies("login");
 
     let npm = parseInt(document.getElementById('npm').value);
     let nama = document.getElementById('nama').value;
