@@ -27,7 +27,7 @@ function responseData(result) {
 
     if (result.status == true) {
         alert("Berhasil Input Data");
-        window.location.href = "../../getBackend.html";
+        window.location.href = "https://repo.if.ulbi.ac.id/sidang/getBackend.html";
     }
     else{
         alert('gagal input data');
