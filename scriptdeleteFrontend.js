@@ -1,6 +1,6 @@
 function deleteFrontend() {
     const frontendID = parseInt(document.getElementById('frontendID').value)
-    let tokenvalue = getCookie('token')
+    let tokenvalue = getCookie('login')
   
     // Lakukan validasi jika productID tidak kosong
     if (frontendID === '') {
@@ -8,7 +8,7 @@ function deleteFrontend() {
       return;
     }
   
-    const endpoint = 'https://asia-southeast2-testlogin-366704.cloudfunctions.net/deletefee';
+    const endpoint = 'https://asia-southeast2-testlogin-366704.cloudfunctions.net/deletefeee';
     const payload = {
       npm: frontendID
     };

@@ -15,7 +15,7 @@ export default function editFrontend(){
     let status = document.getElementById('status').checked;
 
     let datainjson = {
-        "npm": npm, // Contoh id yang unik, Anda dapat menggunakan id yang sesuai dengan kebutuhan aplikasi Anda
+        "npm": npm, 
         "nama": nama,
         "rilisjs": rilisjs,
         "pemanggilanjs": pemanggilanjs,
