@@ -31,6 +31,7 @@ function getBackend() {
       row.innerHTML = `
         <td>${product.NamaDosen}</td>
         <td>${product.Npm}</td>
+        <td>${product.Nama}</td>
         <td>${product.Autentikasitoken}</td>
         <td>${product.Packagesendiri}</td>
         <td>${product.Endpointgcfjakarta}</td>
