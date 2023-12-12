@@ -12,12 +12,8 @@ function getBackend() {
     .then(response => response.json())
     .then(data => {
       if (data.status === true) {
-        // Display username (assuming the first element in the data array has the username)
-        const username = data.username;
-        console.log('Username:', username);
-  
         // Display products in the table
-        displayProducts(data.data,username);
+        displayProducts(data.data);
       } else {
         console.error('Failed to fetch products');
       }
@@ -26,14 +22,14 @@ function getBackend() {
   }
   
   // Display products in the table
-  function displayProducts(products,username) {
+  function displayProducts(products) {
     const tableBody = document.getElementById('productTableBody');
     tableBody.innerHTML = '';
   
     products.forEach(product => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td>${username}</td>
+        <td>${product.NamaDosen}</td>
         <td>${product.Nama}</td>
         <td>${product.Autentikasitoken}</td>
         <td>${product.Packagesendiri}</td>
