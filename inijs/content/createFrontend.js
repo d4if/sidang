@@ -1,13 +1,13 @@
 import { postBiasa } from "../api.js";
 import { getValue } from "../element.js";
 import { createFrontend } from "../gudangAPI.js";
-import { getCookie } from "../cookies.js";
+import { getCookies } from "../cookies.js";
 
 
 export default function createFrontendFix(){
     // tokenstring = getCookie("token")
     let tokenkey = "token";
-    let tokenvalue = getCookie("token");
+    let tokenvalue = getCookies("login");
 
 
     let datainjson = {
@@ -27,7 +27,7 @@ function responseData(result) {
 
     if (result.status == true) {
         alert("Berhasil Input Data");
-        window.location.href = "../getFrontend.html";
+        window.location.href = "https://repo.if.ulbi.ac.id/sidang/getFrontend.html";
     }else{
         alert('gagal input data');
         console.log("gagal");
