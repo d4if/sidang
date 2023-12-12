@@ -30,7 +30,7 @@ function getBackend() {
       const row = document.createElement('tr');
       row.innerHTML = `
         <td>${product.NamaDosen}</td>
-        <td>${product.Nama}</td>
+        <td>${product.Npm}</td>
         <td>${product.Autentikasitoken}</td>
         <td>${product.Packagesendiri}</td>
         <td>${product.Endpointgcfjakarta}</td>
