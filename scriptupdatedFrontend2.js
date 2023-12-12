@@ -4,7 +4,7 @@ import { upadateFrontend } from "./inijs/gudangAPI.js";
 
 export default function editFrontend(){
     let tokenkey = "token";
-    let tokenvalue = getCookies("token");
+    let tokenvalue = getCookies("login");
 
     let npm = parseInt(document.getElementById('npm').value);
     let nama = document.getElementById('nama').value;
