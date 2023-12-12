@@ -1,6 +1,6 @@
 function deleteBackend() {
     const backendID = parseInt(document.getElementById('backendID').value)
-    let tokenvalue = getCookie('token')
+    let tokenvalue = getCookie('login')
   
     // Lakukan validasi jika productID tidak kosong
     if (backendID === '') {
@@ -24,7 +24,7 @@ function deleteBackend() {
       .then(response => {
         if (response.ok) {
           document.getElementById('response').innerText = 'comment deleted successfully';
-          window.location.href = "../getBackend.html";
+          window.location.href = "https://repo.if.ulbi.ac.id/sidang/getBackend.html";
         } else {
           document.getElementById('response').innerText = 'Failed to delete comment';
         }

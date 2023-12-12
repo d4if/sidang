@@ -24,7 +24,7 @@ function deleteFrontend() {
       .then(response => {
         if (response.ok) {
           document.getElementById('response').innerText = 'Frontend deleted successfully';
-          window.location.href = "../getFrontend.html";
+          window.location.href = "https://repo.if.ulbi.ac.id/sidang/getFrontend.html";
         } else {
           document.getElementById('response').innerText = 'Failed to delete Frontend';
         }
